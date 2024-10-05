@@ -5,6 +5,7 @@ import store from './store/store';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Navbar from './components/Navbar';
+import Clothings from './pages/Chothings';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />}></Route>
                         <Route path="/cart" element={<Cart />}></Route>
+                        <Route path="/clothings" element={<Clothings />}></Route>
                     </Routes>
                 </BrowserRouter>
             </Provider>

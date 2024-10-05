@@ -19,7 +19,12 @@ const Navbar = () => {
                     <div className='flex items-center gap-5'>
                     <Link className="text-black hover:text-blue-600  font-semibold text-lg transition duration-300" to="/">
                         Home
-                    </Link>
+                        </Link>
+                        
+                    <Link className="text-black hover:text-blue-600  font-semibold text-lg transition duration-300" to="/clothings">
+                        Chothings
+                        </Link>
+                        
                     <Link className="text-black font-semibold hover:text-blue-600 text-lg transition duration-300" to="/cart">
                         Cart
                     </Link>
