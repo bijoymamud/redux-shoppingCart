@@ -22,7 +22,7 @@ const Cart = () => {
                     
                     <div 
                         key={product._id} 
-                        className="   bg-gray-50 border-2  border-gray-200 drop-shadow-lg rounded-sm  py-3 transition hover:shadow-lg" >
+                        className="   bg-gray-50 border-2  border-gray-200 drop-shadow-lg rounded-sm  transition hover:shadow-lg" >
                     
                         {/* Remove Button */}
                         <div className='flex justify-end items-center'>
@@ -37,13 +37,13 @@ const Cart = () => {
                         <img    
                             src={product.image} 
                             alt={product.title} 
-                            className="w-20 h-28 object-cover mx-auto "
+                            className="w-1/2  object-cover mx-auto rounde-full"
                         />
                         
                         {/* Product Details */}
                         <div className=" flex-1 text-center pb-3">
                             <h5 className="text-xl font-semibold">{product.title}</h5>
-                            <h5 className="text-gray-700 mt-1">${product.price}</h5>
+                            <h5 className="text-gray-700 mt-1 "><span className='font-semibold'>Price : </span>${product.price}</h5>
                         </div>
 
                        

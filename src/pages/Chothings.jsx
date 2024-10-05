@@ -1,13 +1,20 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchClothingData } from '../store/chothingSlice'
-import { Toaster } from 'sonner'
+import { toast, Toaster } from 'sonner'
+import { add } from '../store/cartSlice'
 
 function Chothings() {
 
     const dispatch = useDispatch()
 
-    const { loading, productInfo, error } = useSelector((state) => state.clothing)
+    const { loading, productInfo, error } = useSelector((state) => state.clothing);
+
+    const handleAdd = (product) => {
+        dispatch(add(product));
+        toast.success("Added into Cart", 100)
+
+    }
     
     useEffect(()=>{
         dispatch(fetchClothingData())
@@ -22,11 +29,12 @@ function Chothings() {
     }
     return (
         
-        <div className="relative ">
+        <div className="relative py-20 px-4">
+            <h2 className='pt-10 text-2xl  font-bold text-gray-700 mb-5 '>Cloathings : </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
         {productInfo.map((product) => (
           <div 
-            key={product._id} 
+            key={product.id} 
             className="relative bg-white shadow-lg rounded-sm border-amber-200 flex flex-col border-2"
           >
             <div className="absolute top-2 -left-1 bg-black text-white text-xs px-2 py-1 rounded-sm z-10">
@@ -40,9 +48,9 @@ function Chothings() {
               </button>
             </div>
             <img
-              src={product.images}
+              src={product.image}
               alt={product.title}
-              className="w-full h-2/3 mx-auto object-cover mt-8"
+              className="w-full h-[200px] mx-auto object-cover "
             />
             <div className="flex-grow p-4 flex flex-col justify-between">
               <div>
@@ -54,7 +62,7 @@ function Chothings() {
                 </div>
               </div>
               <button
-                // onClick={() => handleAdd(product)}
+                onClick={() => handleAdd(product)}
                 className="mt-4 w-full bg-yellow-400 font-semibold hover:bg-yellow-500 text-black py-2 px-4 rounded-none transition-colors duration-300"
               >
                 + Add to Cart
@@ -64,7 +72,7 @@ function Chothings() {
         ))}
       </div>
       <div className="fixed bottom-0 right-0 p-4 z-50 ">
-        <Toaster  position="top-right" />
+        <Toaster  position="bottom-right" />
       </div>
     </div>
     )

@@ -71,7 +71,7 @@ export default function Products() {
         ))}
       </div>
       <div className="fixed bottom-0 right-0 p-4 z-50 ">
-        <Toaster  position="top-right" />
+        <Toaster  position="bottom-right" />
       </div>
     </div>
   )
