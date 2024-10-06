@@ -36,7 +36,7 @@ export default function Products() {
             key={product._id} 
             className="relative bg-white shadow-lg rounded-sm border-amber-200 flex flex-col border-2"
           >
-            <div className="absolute top-2 -left-1 bg-black text-white text-xs px-2 py-1 rounded-sm z-10">
+            <div className="absolute  top-2 -left-3 drop-shadow-2xl bg-black text-white text-xs px-2 py-2 rounded-sm z-10">
               25% OFF
             </div>
             <div className="absolute top-2 right-2">

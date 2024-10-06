@@ -11,7 +11,7 @@ const Navbar = () => {
             <div className="container mx-auto px-4 py-3 flex justify-between items-center">
                 {/* Logo Section */}
                 <Link to="/" className="text-2xl font-bold text-blue-600">
-                    <span className="logo">REDUX STORE</span>
+                    <span className="logo">Dev-Store</span>
                 </Link>
 
                 {/* Links Section */}
@@ -22,7 +22,7 @@ const Navbar = () => {
                         </Link>
                         
                     <Link className="text-black hover:text-blue-600  font-semibold text-lg transition duration-300" to="/clothings">
-                        Chothings
+                        Cloathings
                         </Link>
                         
                     <Link className="text-black font-semibold hover:text-blue-600 text-lg transition duration-300" to="/cart">
