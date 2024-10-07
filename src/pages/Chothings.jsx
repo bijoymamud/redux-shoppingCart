@@ -21,7 +21,7 @@ function Chothings() {
     }, [dispatch])
     
     if (loading) {
-        return <p>Loading.....</p>
+        return <p>Loading......</p>
     }
 
     if (error) {
