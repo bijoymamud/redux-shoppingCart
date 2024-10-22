@@ -9,7 +9,7 @@ import Clothings from './pages/Chothings';
 
 function App() {
     return (
-        <div className="App px-5 mx-auto">
+        <div className="App md:px-5 mx-auto">
             <Provider store={store}>
                 <BrowserRouter>
                     <Navbar />

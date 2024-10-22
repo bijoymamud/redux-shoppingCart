@@ -12,7 +12,7 @@ export const fetchClothingData = createAsyncThunk(
 const clothingSlice = createSlice({
     name: "clothing",
     initialState: {
-        loading: false,
+        loading: true,
         productInfo: [],
         error: null
     },
@@ -34,5 +34,5 @@ const clothingSlice = createSlice({
     }
 })
 
-
+export const {loading, productInfo, error} = clothingSlice.actions
 export default clothingSlice.reducer;

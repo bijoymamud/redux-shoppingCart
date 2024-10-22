@@ -21,7 +21,10 @@ export default function Products() {
   }
 
   if (status === STATUSES.LOADING) {
-    return <h2>Loading....</h2>
+    return <div className="flex items-center justify-center h-[400px]">
+    <span className="loading loading-bars loading-lg"></span>
+  </div>
+
   }
 
   if (status === STATUSES.ERROR) {
